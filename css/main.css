@@ -13,4 +13,25 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+
+  scroll-behavior: smooth;
+}
+
+ul#icons li {
+  display:inline;
+  padding-left: 25px; 
+}
+
+ul#menu li {
+  list-style-type: none;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #9925A6;
+  padding-top: 20px;
 }
