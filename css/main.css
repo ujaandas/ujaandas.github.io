@@ -1,0 +1,23 @@
+body {
+
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+
+}
+
+html {
+  background: url("images/wallpaper.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#facebook {
+    background: url("images/facebook.png");
+    background-position:0 0;
+    height:20px;
+    width:20px;
+  }
