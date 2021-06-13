@@ -13,13 +13,17 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-
   scroll-behavior: smooth;
 }
 
 ul#icons li {
-  display:inline;
+  display: inline;
   padding-left: 25px;
+}
+
+.showcase {
+  margin-top: 30px;
+  margin-left: -70px;
 }
 
 ul#menu li {
@@ -36,6 +40,7 @@ ul#menu li {
   left: 0;
   background-color: #9925A6;
   font-size: 18px;
+  box-shadow: 10px 10px 50px black;
 }
 
 .sidenav a {
@@ -55,6 +60,18 @@ ul#menu a:hover {
 }
 
 .main {
-  margin-left: 180px;
+  font-size: 150%;
+  margin-top: 100px;
+  margin-left: 380px;
   padding: 0px 10px;
+}
+
+h1 {
+  font-size: 250%;
+  margin-bottom: -10px;
+}
+
+img {
+  -webkit-filter: drop-shadow(5px 5px 5px black);
+  filter: drop-shadow(5px 5px 5px black);
 }
