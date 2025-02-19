@@ -1,6 +1,7 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default
+title: Home
 ---
+
+<h2>Welcome to My Custom Jekyll Site</h2>
+<p>This is the content of your homepage. You can add more HTML here.</p>
