@@ -22,10 +22,10 @@ title: Ujaan's Mini Devblog
 email: ujaandas03@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   I'm a senior year computer engineering student at HKUST with far too much time on my hands. Welcome to my mini devblog!
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://ujaandas.me" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
-github_username: jekyll
+github_username: ujaandas03
 permalink: pretty
 
 # Build settings
