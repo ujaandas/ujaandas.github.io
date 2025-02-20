@@ -5,7 +5,12 @@
     <div class="container">
       <aside>{% include sidebar.html %}</aside>
       <main>
-        <div class="content">{{ content }}</div>
+        <div class="content">
+          <article class="post">
+            <h2>{{ page.title }}</h2>
+            {{ content }}
+          </article>
+        </div>
       </main>
     </div>
   </body>
