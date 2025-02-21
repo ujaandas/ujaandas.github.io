@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Moving Backwards? Next.js to Jekyll"
-date: 2025-02-21 00:50:20 +0800
-categories: jekyll next.js webdev
+date: 2025-02-20 00:50:20 +0800
+categories: web
 ---
 
 I find it a little ironic that my first _real_ blog post isn't even on the site I spent the most time working on, but rather on the one that was up and running in less than half a day.
