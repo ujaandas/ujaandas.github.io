@@ -27,6 +27,9 @@ url: "https://ujaandas.me" # the base hostname & protocol for your site, e.g. ht
 # twitter_username: jekyllrb
 github_username: ujaandas03
 permalink: pretty
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 # Build settings
 theme:
@@ -42,6 +45,8 @@ plugins:
 # their entries' file path in the `include:` list.
 #
 # exclude:
+# - flake.nix
+# - flake.lock
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
