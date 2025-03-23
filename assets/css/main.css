@@ -18,6 +18,12 @@ header h1 {
   color: #555;
 }
 
+.post h5 {
+  font-size: 0.8em;
+  margin-top: -10px;
+  color: #777;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -39,8 +45,10 @@ main {
 .content h1,
 .content h2,
 .content h3 {
-  font-family: "Georgia", serif;
   color: #555;
+}
+
+.content h5 {
 }
 
 .content p {

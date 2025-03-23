@@ -8,6 +8,7 @@
         <div class="content">
           <article class="post">
             <h2>{{ page.title }}</h2>
+            <h5>{{ page.date | date: "%B %d, %Y" }}</h5>
             <!-- <p>Published on: {{ page.date | date: "%Y-%m-%d" }}</p> -->
             <!-- <p>Categories: {{ page.categories | join: ", " }}</p> -->
             {{ content }}
