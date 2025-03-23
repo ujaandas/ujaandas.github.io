@@ -1,1 +1,1 @@
-File.write("_includes/commit.html", `git rev-parse --short HEAD`)
+File.write("_includes/commit.html", `git rev-parse HEAD`)
