@@ -9,8 +9,6 @@ One of the biggest problems I had with my resume previously was fiddling between
 
 If you just want the code, check out the [repo](https://github.com/ujaandas/nix-resume).
 
-> This also gave me the chance to try out some more of the builtins/stdlib!
-
 ### Defining Variants and Templates
 
 I organize variants as Nix attribute sets. Each variant specifies a template file and a map of section names to content files:
@@ -61,20 +59,30 @@ mkDoc =
       inject =
         line:
         let
-          matched = builtins.filter (t: hasSubstr ("\\\\section\\*\\{" + t + "\\}") line) sectionNames;
+          matched = builtins.filter (t:
+            hasSubstr
+              ("\\\\section\\*\\{" + t + "\\}")
+              line)
+            sectionNames;
         in
         if matched != [ ] then
           line
           + "\n"
           + builtins.concatStringsSep "\n" (
-            map (f: "\\input{" + toString f + "}") sections.${builtins.head matched}
+            map
+              (f: "\\input{" + toString f + "}")
+              sections.${builtins.head matched}
           )
         else
           line;
 
       allLines = builtins.map inject lines;
     in
-    builtins.concatStringsSep "\n" (builtins.filter builtins.isString allLines);
+    builtins.concatStringsSep
+      "\n"
+      (builtins.filter
+        builtins.isString
+        allLines);
 ```
 
 This function produces a complete `main.tex` that `latexmk` can compile without manual edits.
