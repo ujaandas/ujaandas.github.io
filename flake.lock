@@ -74,11 +74,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1765976156,
-        "narHash": "sha256-fU+Oo7VIELcY8Sl9ItBrNQnjAixECyrUwiZIekWpS20=",
+        "lastModified": 1765977860,
+        "narHash": "sha256-ABUZCwEAGz+PlqREaPjWe24PCpFbbtYPEmZWHsFVSa4=",
         "owner": "ujaandas",
         "repo": "oojsite",
-        "rev": "2e66f99ea70a8406e875f8942c08de165b763866",
+        "rev": "6c4181ad2fbfadd851c5fb9a95dd33ac1d9e9e27",
         "type": "github"
       },
       "original": {
