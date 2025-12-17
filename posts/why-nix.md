@@ -1,8 +1,8 @@
 ---
-layout: post
 title: "Why Nix?"
-date: 2025-02-20 00:50:20 +0800
-categories: nix
+template: "post"
+tags: ["posts"]
+random: "pepee"
 ---
 
 I reckon if you asked any Mac user to list how many programs they had installed via Brew, they'd either give you a blank stare and wonder why you're asking a stranger about beer-making, or give you an answer in the ballpark of a couple hundred.

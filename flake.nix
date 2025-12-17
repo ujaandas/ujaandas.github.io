@@ -1,41 +1,44 @@
 {
-  description = "Example development environment flake";
+  description = "Personal website flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    oojsite.url = "github:ujaandas/oojsite";
   };
 
   outputs =
     {
-      self,
       nixpkgs,
       flake-utils,
+      oojsite,
+      ...
     }:
     flake-utils.lib.eachDefaultSystem (
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
-        ruby = pkgs.ruby_3_4;
-        packages = with pkgs; [
-          # bundix
-          bundler
-          jekyll
-        ];
+        site = oojsite.defaultPackage.${system};
       in
-      # gems = bundlerEnv {
-      #   name = "ujaandas.github.io";
-      #   inherit ruby;
-      #   gemfile = ./Gemfile;
-      #   lockfile = ./Gemfile.lock;
-      #   gemdir = ./.;
-      # };
       {
+        packages.site = site;
+        defaultPackage = site;
+
         devShell = pkgs.mkShell {
-          # buildInputs = packages ++ [ gems ];
-          buildInputs = packages;
-          shellHook = ''
-            echo "Welcome to the development shell!"
+          buildInputs = [
+            site
+            pkgs.watchexec
+          ];
+        };
+
+        packages.website = pkgs.stdenv.mkDerivation {
+          name = "my-website";
+          src = ./.;
+
+          buildInputs = [ site ];
+
+          buildPhase = ''
+            ${site}/bin/oojsite build --output $out
           '';
         };
       }

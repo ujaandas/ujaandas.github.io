@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Why Nix? | Ujaan Das</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <link href="../static/styles.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="../static/favicon.ico">
+</head>
+
+<body class="flex flex-col items-center justify-center align-middle min-h-screen bg-slate-100 text-gray-800">
+  <main class="flex flex-col md:flex-row md:items-start justify-between max-w-3xl mx-auto flex-grow p-6 gap-6">
+    
+    <div class="flex-shrink-0 hidden md:flex md:flex-col md:items-start md:mt-10 md:mr-10">
+      <img src="../static/pfp.webp" alt="Profile picture" class="w-40 h-auto mb-4" />
+      <nav class="hidden md:flex md:flex-col md:gap-2 text-sm">
+        <a href="https://github.com/ujaandas" target="_blank" class="flex items-center gap-2 hover:underline">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/ujaandas" target="_blank" class="flex items-center gap-2 hover:underline">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://instagram.com/ujaa_das" target="_blank" class="flex items-center gap-2 hover:underline">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="static/resume.pdf" target="_blank" class="flex items-center gap-2 hover:underline">
+          <i class="fas fa-file-alt"></i> Resume
+        </a>
+        <a href="mailto:ujaandas03@gmail.com" target="_blank" class="flex items-center gap-2 hover:underline">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+      </nav>
+    </div>
+
+    <div class="md:mt-10 w-full">
+      <h1 class="text-3xl font-bold mb-4">Why Nix?</h1>
+      <article class="article">
+          <p>I reckon if you asked any Mac user to list how many programs they had installed via Brew, they'd either give you a blank stare and wonder why you're asking a stranger about beer-making, or give you an answer in the ballpark of a couple hundred.</p>
+<h3>Reproducibility</h3>
+<p>Far too often did I find myself installing a bunch of random tools and programs to test out random stuff, and then promptly forget to ever remove them. And those 5 different versions of Python you installed (and inevitably have to wrangle via Conda)? Five different Java SDKs? Node version manager? The list goes on...</p>
+<p>We've all been there. Every developer knows the woes of dependency hell, and arguably the biggest cause is a lack of reproducibility.</p>
+<p>That's where Nix comes in. Be it on a system-level, environment-level, or even package-level, Nix is a tool that was developed for just that, and one that I've come to really appreciate in the past few months of using it.</p>
+<p>From my understanding, Nix is both a package manager and a language, where Nix the language is used to describe &quot;inputs&quot; and &quot;outputs&quot; to Nix the package manager. Through fully reproducible, cross-platform, binary-cached builds from the largest package repository in the world, Nix allows me to create the fully reproducible system I've always wanted.</p>
+<h3>Nix is Pretty Straightforward</h3>
+<ol>
+<li>
+<p><strong>Derivations</strong>: Nix packages are defined using a functional language. Each package definition, called a derivation, describes how to build the package, including its dependencies, source code, and build instructions.</p>
+</li>
+<li>
+<p><strong>Hashes</strong>: Each derivation produces a unique hash based on its inputs (dependencies, configuration options, source code, etc.). This hash uniquely identifies the package's build outputs.</p>
+</li>
+<li>
+<p><strong>Reproducibility</strong>: Since the hash is generated from all the inputs, if you have the same inputs, you'll get the same hash and build output, regardless of the environment. This ensures that builds are reproducible across different machines.</p>
+</li>
+<li>
+<p><strong>Isolation</strong>: Nix builds packages in isolation using unique build environments. This prevents interference from other packages or system settings (if in a pure environment), ensuring that the build process is clean and reproducible.</p>
+</li>
+<li>
+<p><strong>Binary Cache</strong>: Nix also has a global binary cache where pre-built packages are stored. If a package's hash matches one in the cache, Nix can download and use the pre-built binary instead of building it from scratch.</p>
+</li>
+<li>
+<p><strong>Pinning</strong>: By pinning dependencies to specific hashes, Nix ensures that your projects always use the exact same versions of dependencies, avoiding issues caused by updates or changes in dependencies. This is particularly useful for long-term projects or collaborations where consistency is crucial.</p>
+</li>
+</ol>
+<h3>Trying it out</h3>
+<p>This is probably Nix's biggest downfall, and I'm sure most of the community would agree. Unlike Arch or somesuch, which is usually as simple as booting in and selecting your settings, Nix seems to lack a proper, easy-to-follow, opinionated guide to set it up and learn it from the get go. As a result, getting Nix up and running can be a little troublesome, but it's still insanely worth it.</p>
+<p>Check the sources below out for some good reading material on how to get started:</p>
+<ol>
+<li><a href="https://nix.dev/">nix.dev</a></li>
+<li><a href="https://nixos-and-flakes.thiscute.world/">NixOS and Flakes Book</a></li>
+<li><a href="https://www.youtube.com/@vimjoyer">Vimjoyer's Youtube Channel</a></li>
+</ol>
+<p>In addition, I'll write another post detailing how I set it up for myself.</p>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="flex flex-col justify-center text-center text-sm text-gray-500 mt-12 mb-4">
+    <a href="url" class="mb-1">@2492c87</a>
+    <p>© 2025 Ujaan Das</p>
+  </footer>
+</body>
+
+</html>
