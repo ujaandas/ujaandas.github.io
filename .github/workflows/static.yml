@@ -35,8 +35,8 @@ jobs:
       - name: Install Nix
         uses: cachix/install-nix-action@v27
 
-      - name: list all HTML files Tailwind sees
-        run: find . -name "*.html" -print
+      - name: Update flake
+        run: nix flake update
 
       - name: Build site with Nix
         run: nix run .#site
