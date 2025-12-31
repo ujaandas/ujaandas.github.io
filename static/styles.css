@@ -4,7 +4,7 @@
 
 @layer components {
   .article {
-    @apply max-w-none leading-relaxed text-gray-800 break-words;
+    @apply text-lg max-w-none leading-relaxed text-gray-800;
   }
 
   .article > h1 {
