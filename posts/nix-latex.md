@@ -2,7 +2,7 @@
 title: "Nix and LaTex"
 template: "post"
 tags: ["posts"]
-random: "pepee"
+date: "April 7, 2025"
 ---
 
 Lately, I've been wondering why I've had to put up with Overleaf's awful UX when I could just as well edit my personal documents on my own code editor and track relevant changes with Git. Unfortunately, the first thought that came to my mind was how I could build said documents with Nix.
