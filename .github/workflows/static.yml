@@ -39,7 +39,7 @@ jobs:
         run: nix flake update
 
       - name: Build site with Nix
-        run: nix run .#site
+        run: nix run .#site -- --baseUrl="https://ujaan.me"
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
