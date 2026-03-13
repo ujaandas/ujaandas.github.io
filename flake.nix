@@ -20,7 +20,8 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         baseOojsite = oojsite.defaultPackage.${system};
-        commitHash = self.shortRev or self.dirtyShortRev or "unknown";
+        rawHash = self.shortRev or self.dirtyShortRev or "unknown";
+        commitHash = pkgs.lib.removeSuffix "-dirty" rawHash;
 
         mysite = pkgs.writeShellApplication {
           name = "build-site";
