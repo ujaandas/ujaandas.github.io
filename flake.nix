@@ -9,7 +9,6 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       flake-utils,
       oojsite,
@@ -18,35 +17,12 @@
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
-        baseOojsite = oojsite.defaultPackage.${system};
-        rawHash = self.shortRev or self.dirtyShortRev or "unknown";
-        commitHash = pkgs.lib.removeSuffix "-dirty" rawHash;
-
-        mysite = pkgs.writeShellApplication {
-          name = "build-site";
-          runtimeInputs = [ pkgs.gnused baseOojsite ];
-          text = ''
-            FOOTER_FILE="components/footer.html"
-
-            if [ -f "$FOOTER_FILE" ]; then
-              # Update the URL hash
-              sed -i -E "s|/commit/[0-9a-f]+|/commit/${commitHash}|" "$FOOTER_FILE"
-
-              # Update the visible text hash
-              sed -i -E "s|@[0-9a-f]+|@${commitHash}|" "$FOOTER_FILE"
-              echo "${commitHash} in $FOOTER_FILE"
-            else
-              echo "Something has gone terribly wrong"
-            fi
-
-            ${pkgs.lib.getExe baseOojsite } "$@"
-          '';
-        };
+        # pkgs = nixpkgs.legacyPackages.${system};
+        site = oojsite.defaultPackage.${system};
       in
       {
-        packages.site = mysite;
-        defaultPackage = mysite;
+        packages.site = site;
+        defaultPackage = site;
       }
       );
     }
