@@ -1,7 +1,7 @@
 ---
 title: "Building an Editor: Part 1"
 template: "post"
-tags: ["projects"]
+tags: ["posts"]
 date: "February 10, 2026"
 ---
 
