@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>{{ .Title }} | Ujaan Das</title>
+  <title>{{ .Frontmatter.Title }} | Ujaan Das</title>
   {{ template "header.html" . }}
 </head>
 
@@ -11,7 +11,7 @@
     {{ template "sidebar.html" . }}
 
     <div class="md:mt-10 w-full overflow-hidden">
-      <h1 class="text-3xl font-bold mb-4">{{ .Title }}</h1>
+      <h1 class="text-3xl font-bold mb-4">{{ .Frontmatter.Title }}</h1>
       <article class="article">
           {{ .Content }}
       </article>

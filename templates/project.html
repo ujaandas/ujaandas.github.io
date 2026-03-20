@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{{ .Frontmatter.Title }} | Ujaan Das</title>
+  {{ template "header.html" . }}
+</head>
+
+<body class="flex flex-col items-center justify-center align-middle min-h-screen bg-white text-gray-800 font-serif">
+  <main class="flex flex-col md:flex-row md:items-start justify-between max-w-3xl mx-auto flex-grow p-6 gap-6">
+    {{ template "sidebar.html" . }}
+
+    <div class="md:mt-10 w-full overflow-hidden">
+
+      <h1 class="text-3xl font-bold">{{ .Frontmatter.Title }}</h1>
+      <article class="article">
+         <div class="w-full h-48 overflow-hidden rounded-lg mb-4">
+            <img 
+              src={{ .Frontmatter.Thumbnail }}
+              alt="Thumbnail for {{ .Frontmatter.Title }}" 
+              class="w-full h-full object-cover object-[50%_60%]"
+            />
+          </div>
+          {{ .Content }}
+      </article>
+    </div>
+  </main>
+
+  {{ template "footer.html" . }}
+</body>
+
+</html>
