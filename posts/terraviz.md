@@ -24,14 +24,7 @@ Basically, if it lives on land and depends on climate, we tried to model it.
 
 The system is modular, so new datasets or models can slot in without rewriting the whole pipeline - a small miracle considering we built this in under 48 hours and half the team met each other for the first time on Saturday morning.
 
-### How'd We Build It?
-
-We split into functional teams because pretending to be organised is half the battle at a hackathon.
-
-- ML/AI handled the predictive models for carbon and crop yield
-- Backend wrangled geospatial processing, raster pipelines, and data fusion
-- Frontend built the interactive map and region-selection UI (les mois)
-- Presentation shaped the narrative
+### Inner Workings
 
 Under the hood, TerraVysers pulls from:
 
@@ -43,17 +36,7 @@ Under the hood, TerraVysers pulls from:
 
 Everything is aligned to a consistent grid so the overlays don't look like a geological ransom note.
 
-### The Good, The Bad, and the Ugly
-
-Hackathons are great because they force you to confront the limits of your ambition in real time.
-
-Some highlights:
-
-- Several "open" datasets were only open after manual approval, which is not ideal when you have 36 hours and the approval email says "we will respond within 5–7 business days."
-- Raster processing at scale is... heavy
-- None of us had worked together before, so we had to speedrun team formation, communication, and had our fair share of "disagreements"
-
-But somehow, it came together.
+### So, Then What?
 
 By the end, we had:
 
@@ -70,4 +53,4 @@ And yes, we did manage to explain it to the judges in under 180 seconds - though
 
 TerraVysers isn't meant to be a pretty map. It's meant to be a decision engine - a way to turn environmental data into operational guidance for land use, climate strategy, and food security.
 
-And for a weekend project, I think we got surprisingly close.
+And for a weekend project, I think we got surprisingly close!
