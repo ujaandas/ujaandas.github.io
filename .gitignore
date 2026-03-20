@@ -2,4 +2,4 @@ flake.lock
 .direnv
 .DS_Store
 out/
-*.identifier
+*.Identifier
