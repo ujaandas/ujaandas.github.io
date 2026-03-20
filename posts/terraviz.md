@@ -2,7 +2,7 @@
 title: "Terraviz - Actionable Environmental Data"
 template: "project"
 tags: ["projects"]
-date: "Feb 1, 2026"
+date: "February 1, 2026"
 thumbnail: "/static/terraviz.png"
 ---
 
