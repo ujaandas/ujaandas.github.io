@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <title>Home | Ujaan Das</title>
-    {{ template "header.html" . }}
-  </head>
+<head>
+  <title>Home | Ujaan Das</title>
+  {{ template "header.html" . }}
+</head>
 
-  <body class="flex flex-col items-center justify-center align-middle min-h-screen bg-white text-gray-800 font-serif">
-    <main class="flex flex-col md:flex-row md:items-start justify-between max-w-3xl mx-auto flex-grow p-6 gap-6">
-      {{ template "sidebar.html" . }}
+<body
+  class="flex flex-col items-center justify-center align-middle min-h-screen bg-white dark:bg-slate-950 text-gray-800 dark:text-gray-100 font-serif">
+  <main class="flex flex-col md:flex-row md:items-start justify-between max-w-3xl mx-auto flex-grow p-6 gap-6">
+    {{ template "sidebar.html" . }}
 
-      <div class="md:mt-10">
-        <a href="/posts/about-me/">
-          <h1 class="text-3xl text-blue-600 hover:underline font-bold mb-4">Hey, I'm Ujaan.</h1>
-        </a>
-        {{ template "aboutme.html" . }}
+    <div class="md:mt-10">
+      <a href="/posts/about-me/">
+        <h1 class="text-3xl text-blue-600 dark:text-blue-400 hover:underline font-bold mb-4">Hey, I'm Ujaan.</h1>
+      </a>
+      {{ template "aboutme.html" . }}
 
-        <section class="mb-6">
-          <a href="/blog/" class="text-2xl text-blue-600 font-semibold mb-2 hover:underline">Blog →</a>
-          <p class="text-base text-gray-600 mb-2">Random thoughts and quick writeups on things I learn.</p>
-        </section>
+      <section class="mb-6">
+        <a href="/blog/" class="text-2xl text-blue-600 dark:text-blue-400 font-semibold mb-2 hover:underline">Blog →</a>
+        <p class="text-base text-gray-600 dark:text-gray-300 mb-2">Random thoughts and quick writeups on things I learn.
+        </p>
+      </section>
 
-        <section>
-          <a href="/projects/" class="text-2xl text-blue-600 font-semibold mb-2 hover:underline">Projects →</a>
-          <p class="text-base text-gray-600 mb-2">Recruiters and employers, this way please!</p>
-        </section>
+      <section>
+        <a href="/projects/"
+          class="text-2xl text-blue-600 dark:text-blue-400 font-semibold mb-2 hover:underline">Projects →</a>
+        <p class="text-base text-gray-600 dark:text-gray-300 mb-2">Recruiters and employers, this way please!</p>
+      </section>
 
-      </div>
-    </main>
+    </div>
+  </main>
 
-    {{ template "footer.html" . }}
-  </body>
+  {{ template "footer.html" . }}
+</body>
 
 </html>
