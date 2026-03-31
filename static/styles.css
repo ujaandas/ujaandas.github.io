@@ -2,43 +2,103 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @layer base {
+  :root {
+    --canvas: 248 249 252;
+    --ink: 31 41 55;
+    --surface-soft: 243 246 252;
+    --brand: 37 99 235;
+  }
+
   html {
     color-scheme: light dark;
+    scroll-behavior: smooth;
+    font-size: 17px;
+  }
+
+  body {
+    font-family: 'EB Garamond', Georgia, Cambria, 'Times New Roman', serif;
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: rgb(var(--ink)) !important;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(247, 250, 255, 0.72) 66%, rgba(238, 245, 255, 0.66) 100%),
+      radial-gradient(circle at 78% 112%, rgba(147, 197, 253, 0.14), transparent 52%),
+      rgb(var(--canvas)) !important;
+    background-attachment: fixed;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --canvas: 2 6 23;
+      --ink: 213 219 230;
+      --surface-soft: 10 15 30;
+      --brand: 96 165 250;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 12% 0%, rgba(30, 64, 175, 0.22), transparent 52%),
+        linear-gradient(180deg, rgba(2, 6, 23, 0) 60%, rgba(15, 23, 42, 0.36) 100%),
+        rgb(var(--canvas)) !important;
+    }
+  }
+
+  ::selection {
+    background: rgba(var(--brand), 0.25);
+  }
+
+  a {
+    transition: color 180ms ease, text-decoration-color 180ms ease, opacity 180ms ease;
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+    font-variant-ligatures: none;
   }
 }
 
 @layer components {
   .article {
-    @apply text-lg max-w-none leading-relaxed text-gray-800 dark:text-gray-200;
+    @apply text-lg max-w-none leading-relaxed;
+    color: color-mix(in srgb, rgb(var(--ink)) 92%, transparent);
   }
 
   .article>h1 {
-    @apply text-3xl font-bold mt-10 mb-6 leading-tight;
+    @apply text-4xl font-bold mt-10 mb-6 leading-tight;
   }
 
   .article>h2 {
-    @apply text-2xl font-semibold mt-8 mb-4 leading-snug;
+    @apply text-3xl font-semibold mt-8 mb-4 leading-snug;
   }
 
   .article>h3 {
-    @apply text-xl font-semibold mt-6 mb-3 leading-snug;
+    @apply text-2xl font-semibold mt-6 mb-3 leading-snug;
   }
 
   .article>h4 {
-    @apply text-lg font-semibold mt-5 mb-2;
+    @apply text-xl font-semibold mt-5 mb-2;
   }
 
   .article>p {
-    @apply my-4 text-gray-700 dark:text-gray-300;
+    @apply my-5 text-xl;
+    color: color-mix(in srgb, rgb(var(--ink)) 88%, transparent);
   }
 
   .article a {
-    @apply text-blue-600 dark:text-blue-400 underline decoration-blue-400 dark:decoration-blue-500 decoration-2 underline-offset-2;
+    @apply underline decoration-2 underline-offset-4;
+    color: rgb(var(--brand));
+    text-decoration-color: color-mix(in srgb, rgb(var(--brand)) 70%, white);
   }
 
   .article a:hover {
-    @apply text-blue-700 dark:text-blue-300 decoration-blue-600 dark:decoration-blue-400;
+    text-decoration-color: rgb(var(--brand));
   }
 
   .article>ul {
@@ -54,19 +114,19 @@
   }
 
   .article>blockquote {
-    @apply border-l-4 border-gray-300 dark:border-gray-600 pl-4 italic text-gray-600 dark:text-gray-400 my-6;
+    @apply pl-4 italic text-gray-600 dark:text-gray-400 my-6;
   }
 
   .article code {
-    @apply bg-gray-100 dark:bg-slate-900 px-1 py-0.5 rounded text-sm font-mono text-gray-800 dark:text-gray-100;
+    @apply px-1 py-0.5 rounded text-base bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100;
   }
 
   .article pre {
-    @apply bg-gray-100 dark:bg-slate-900 p-4 rounded my-4 text-sm leading-relaxed overflow-x-auto whitespace-pre;
+    @apply p-4 rounded-xl my-5 text-base leading-relaxed overflow-x-auto whitespace-pre bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100;
   }
 
   .article pre code {
-    @apply bg-transparent p-0 rounded-none text-inherit;
+    @apply bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100 p-0 rounded-none text-inherit;
   }
 
   .article>hr {
@@ -78,11 +138,11 @@
   }
 
   .article table {
-    @apply w-full border-collapse my-6 text-sm;
+    @apply w-full border-collapse my-6 text-base;
   }
 
   .article th {
-    @apply border-b border-gray-300 dark:border-gray-600 font-semibold text-left p-2 bg-gray-50 dark:bg-slate-900;
+    @apply border-b border-gray-300 dark:border-gray-600 font-semibold text-left p-2 bg-gray-50 dark:bg-slate-800;
   }
 
   .article td {
@@ -98,6 +158,6 @@
   }
 
   .article figcaption {
-    @apply text-center text-sm text-gray-500 dark:text-gray-400 mt-2;
+    @apply text-center text-base text-gray-500 dark:text-gray-400 mt-2;
   }
 }
