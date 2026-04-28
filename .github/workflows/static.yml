@@ -32,6 +32,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Clean
+        run: rm -rf ./out
+
       - name: Install Nix
         uses: cachix/install-nix-action@v27
 
