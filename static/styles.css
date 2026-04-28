@@ -13,7 +13,6 @@
   }
 
   html {
-    color-scheme: light dark;
     scroll-behavior: smooth;
     font-size: 17px;
   }
@@ -31,24 +30,11 @@
     background-attachment: fixed;
   }
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --canvas: 2 6 23;
-      --ink: 213 219 230;
-      --surface-soft: 10 15 30;
-      --brand: 96 165 250;
-    }
 
-    body {
-      background:
-        radial-gradient(circle at 12% 0%, rgba(30, 64, 175, 0.22), transparent 52%),
-        linear-gradient(180deg, rgba(2, 6, 23, 0) 60%, rgba(15, 23, 42, 0.36) 100%),
-        rgb(var(--canvas)) !important;
-    }
-  }
 
   ::selection {
-    background: rgba(var(--brand), 0.25);
+    background: rgba(var(--brand), 0.4);
+    color: inherit;
   }
 
   a {
@@ -114,23 +100,23 @@
   }
 
   .article>blockquote {
-    @apply pl-4 italic text-gray-600 dark:text-gray-400 my-6;
+    @apply pl-4 italic text-gray-600 my-6;
   }
 
   .article code {
-    @apply px-1 py-0.5 rounded text-base bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100;
+    @apply px-1 py-0.5 rounded text-base bg-slate-100 text-slate-800;
   }
 
   .article pre {
-    @apply p-4 rounded-xl my-5 text-base leading-relaxed overflow-x-auto whitespace-pre bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100;
+    @apply p-4 rounded-xl my-5 text-base leading-relaxed overflow-x-auto whitespace-pre bg-slate-100 text-slate-800;
   }
 
   .article pre code {
-    @apply bg-slate-100 text-slate-800 dark:bg-slate-900 dark:text-slate-100 p-0 rounded-none text-inherit;
+    @apply bg-slate-100 text-slate-800 p-0 rounded-none text-inherit;
   }
 
   .article>hr {
-    @apply my-8 border-gray-300 dark:border-gray-600;
+    @apply my-8 border-gray-300;
   }
 
   .article img {
@@ -142,22 +128,22 @@
   }
 
   .article th {
-    @apply border-b border-gray-300 dark:border-gray-600 font-semibold text-left p-2 bg-gray-50 dark:bg-slate-800;
+    @apply border-b border-gray-300 font-semibold text-left p-2 bg-gray-50;
   }
 
   .article td {
-    @apply border-b border-gray-300 dark:border-gray-600 p-2;
+    @apply border-b border-gray-300 p-2;
   }
 
   .article strong {
-    @apply font-semibold text-gray-900 dark:text-white;
+    @apply font-semibold text-gray-900;
   }
 
   .article em {
-    @apply italic text-gray-700 dark:text-gray-300;
+    @apply italic text-gray-700;
   }
 
   .article figcaption {
-    @apply text-center text-base text-gray-500 dark:text-gray-400 mt-2;
+    @apply text-center text-base text-gray-500 mt-2;
   }
 }
