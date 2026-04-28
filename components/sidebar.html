@@ -3,26 +3,5 @@
     <img src="/static/me.webp" alt="Profile picture" class="w-40 h-auto mb-5" />
   </a>
 
-  <nav class="hidden md:flex md:flex-col md:gap-2.5 text-base text-gray-700">
-    <a href="https://github.com/ujaandas" target="_blank"
-      class="flex items-center gap-2 hover:underline underline-offset-4 decoration-2 hover:text-blue-700 transition-colors duration-200">
-      <i class="fab fa-github text-lg"></i>
-      <p class="text-lg">GitHub</p>
-    </a>
-    <a href="https://linkedin.com/in/ujaandas" target="_blank"
-      class="flex items-center gap-2 hover:underline underline-offset-4 decoration-2 hover:text-blue-700 transition-colors duration-200">
-      <i class="fab fa-linkedin text-lg"></i>
-      <p class="text-lg">LinkedIn</p>
-    </a>
-    <a href="/static/resume.pdf" target="_blank"
-      class="flex items-center gap-2 hover:underline underline-offset-4 decoration-2 hover:text-blue-700 transition-colors duration-200">
-      <i class="fas fa-file-alt text-lg"></i>
-      <p class="text-lg">Resume</p>
-    </a>
-    <a href="mailto:ujaandas03@gmail.com" target="_blank"
-      class="flex items-center gap-2 hover:underline underline-offset-4 decoration-2 hover:text-blue-700 transition-colors duration-200">
-      <i class="fas fa-envelope text-lg"></i>
-      <p class="text-lg">Email</p>
-    </a>
-  </nav>
+  {{ template "nav.html" . }}
 </div>
