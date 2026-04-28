@@ -21,10 +21,9 @@ when I was 3. I've always been into tech, gaming and
 coding (does [Scratch](https://scratch.mit.edu/users/dasu1) count?).
 
 Professionally, I've had a mix of experiences at various startups and research labs,
-focusing on backend and systems programming. I've designed compilers and DSLs for agents, 
+with work spanning across the stack. I've designed compilers and DSLs for agents, 
 built static analysis pipelines that process millions and millions of lines of code, and 
-worked on all sorts of high-performance backend systems - from geo-spatial infrastructure 
-to agent-driven workflows.
+worked on all sorts of front-ends - from geo-spatial visualization to agent-driven chatbots.
 
 Thanks to my undergrad in Computer Engineering, I also got to play around with
 embedded systems and robotics - our final year project was an autonomous
