@@ -23,18 +23,14 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     color: rgb(var(--ink)) !important;
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.99) 0%, rgba(247, 250, 255, 0.72) 66%, rgba(238, 245, 255, 0.66) 100%),
-      radial-gradient(circle at 78% 112%, rgba(147, 197, 253, 0.14), transparent 52%),
-      rgb(var(--canvas)) !important;
-    background-attachment: fixed;
+    background: white !important;
   }
 
 
 
   ::selection {
-    background: rgba(var(--brand), 0.4);
-    color: inherit;
+    background: rgb(var(--brand));
+    color: white;
   }
 
   a {
@@ -52,8 +48,7 @@
 
 @layer components {
   .article {
-    @apply text-lg max-w-none leading-relaxed;
-    color: color-mix(in srgb, rgb(var(--ink)) 92%, transparent);
+    @apply text-lg max-w-none leading-relaxed text-gray-800;
   }
 
   .article>h1 {
@@ -73,18 +68,15 @@
   }
 
   .article>p {
-    @apply my-5 text-xl;
-    color: color-mix(in srgb, rgb(var(--ink)) 88%, transparent);
+    @apply my-5 text-xl text-gray-800;
   }
 
   .article a {
-    @apply underline decoration-2 underline-offset-4;
-    color: rgb(var(--brand));
-    text-decoration-color: color-mix(in srgb, rgb(var(--brand)) 70%, white);
+    @apply underline decoration-2 underline-offset-4 text-blue-700 hover:text-blue-900;
   }
 
   .article a:hover {
-    text-decoration-color: rgb(var(--brand));
+    text-decoration-color: currentColor;
   }
 
   .article>ul {
