@@ -88,7 +88,7 @@ type Frontmatter struct {
 
 Most of these make sense, like the title (obviously), the template (matched by name, determines the outline of the post page), but what's interesting are the tags. Tags are unique in that you can call that tag from any other HTML page to iterate over all pages with that tag. This lets me split my posts by category, and maybe later add proper search functionality.
 
-After all the content is generated, we build Tailwind. This just shells out to the Tailwind CLI with the right input/output paths. I didn’t want to embed a CSS pipeline into the tool - that’s how you end up reinventing Webpack by accident - so calling the CLI is perfectly fine (more on that and dependencies later!):
+After all the content is generated, we build Tailwind. This just shells out to the Tailwind CLI with the right input/output paths. I didn't want to embed a CSS pipeline into the tool - that's how you end up reinventing Webpack by accident - so calling the CLI is perfectly fine (more on that and dependencies later!):
 
 ```go
 // Use `os/exec` to build TailwindCSS.

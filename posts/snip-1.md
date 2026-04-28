@@ -5,7 +5,7 @@ tags: ["posts"]
 date: "February 10, 2026"
 ---
 
-In my spare time, I’ve been working on a little editor/TUI framework called **snip**, mostly because I wanted something nicer than Vim for quick edits, but also because I didn’t want to go full NeoVim‑guru and maintain a config that looks like a PhD thesis. I know enough Vim to get by over SSH, but that’s about it. I think my `.vimrc` is like 20 lines? I wanted something simple, predictable, and Nix‑first.
+In my spare time, I've been working on a little editor/TUI framework called **snip**, mostly because I wanted something nicer than Vim for quick edits, but also because I didn't want to go full NeoVim‑guru and maintain a config that looks like a PhD thesis. I know enough Vim to get by over SSH, but that's about it. I think my `.vimrc` is like 20 lines? I wanted something simple, predictable, and Nix‑first.
 
 > Editor's Note: I now realize that by making this "Nix-first", I won't really be able to use it super well on my university machines... I'll figure that out later.
 
@@ -13,11 +13,11 @@ So anyways, I wrote my own editor. Obviously.
 
 This was a _slightly_ bigger project than I had initially intended, but it's working out alright so far.
 
-When I realized that, I decided I wanted something extensible, so the runtime is the bit I ended up spending a lot of my initial time on, and honestly, it’s probably the cleanest part of the whole project. It’s tiny, it’s boring, and it does exactly what I need it to do - which is kind of the point.
+When I realized that, I decided I wanted something extensible, so the runtime is the bit I ended up spending a lot of my initial time on, and honestly, it's probably the cleanest part of the whole project. It's tiny, it's boring, and it does exactly what I need it to do - which is kind of the point.
 
 ### Architecture
 
-snip follows a TEA‑ish, Elm‑ish architecture. I say "‑ish" because I’m not trying to be academically correct here; I just like the idea of pure state transitions and deferred effects. The TUI framework is very, very, **very** heavily inspired by Bubble Tea, except written in C++ because I enjoy suffering.
+snip follows a TEA‑ish, Elm‑ish architecture. I say "‑ish" because I'm not trying to be academically correct here; I just like the idea of pure state transitions and deferred effects. The TUI framework is very, very, **very** heavily inspired by Bubble Tea, except written in C++ because I enjoy suffering.
 
 The gist:
 
@@ -26,11 +26,11 @@ The gist:
 - Side‑effects are deferred as commands.
 - The runtime is the only impure part.
 
-This keeps everything testable and predictable. (Do I test it? No. But I _could_, and that’s what matters.)
+This keeps everything testable and predictable. (Do I test it? No. But I _could_, and that's what matters.)
 
 ### Messages: Tiny Blobs of Meaning
 
-Everything that happens in snip is a message. Keypress? Message. Window resize? Message. File opened? Message. They’re just variants — no inheritance, no polymorphism, no "clever" abstractions.
+Everything that happens in snip is a message. Keypress? Message. Window resize? Message. File opened? Message. They're just variants — no inheritance, no polymorphism, no "clever" abstractions.
 
 ```cpp
 struct QuitMsg {};
@@ -80,7 +80,7 @@ struct UpdateResult {
 };
 ```
 
-It’s very functional‑programming‑core in C++, which is either charming or cursed depending on your tolerance for templates.
+It's very functional‑programming‑core in C++, which is either charming or cursed depending on your tolerance for templates.
 
 ### The Actual Runtime
 
@@ -104,10 +104,10 @@ public:
 };
 ```
 
-The runtime is intentionally tiny - I want as little logic here as possible. It just shuffles messages around, executes commands, and calls the pure functions. That’s it. The editor logic lives elsewhere, which makes it easier to swap things out later if I ever decide to change how rendering works or add a different input backend.
+The runtime is intentionally tiny - I want as little logic here as possible. It just shuffles messages around, executes commands, and calls the pure functions. That's it. The editor logic lives elsewhere, which makes it easier to swap things out later if I ever decide to change how rendering works or add a different input backend.
 
-### That’s Basically It
+### That's Basically It
 
-This is the foundation everything else sits on. Next up, I’ll probably write a a bit more about how I implement the `Program` class.
+This is the foundation everything else sits on. Next up, I'll probably write a a bit more about how I implement the `Program` class.
 
 Check out the repo [here](https://github.com/ujaandas/snip/tree/main).

@@ -19,7 +19,7 @@ It's basically the rule that decides _where_ the compiler looks for unqualified 
 std::cout << myGapLine;
 ```
 
-The compiler tries to find an `operator<<` that matches. And here’s the part I completely glossed over at first: my `operator<<` was actually a member function of the class. Which sounds reasonable until you remember one extremely cursed C++ fact:
+The compiler tries to find an `operator<<` that matches. And here's the part I completely glossed over at first: my `operator<<` was actually a member function of the class. Which sounds reasonable until you remember one extremely cursed C++ fact:
 
 **Stream operators cannot be member functions of your type.**
 
@@ -41,11 +41,11 @@ A member function of my class only works if my type is on the left‑hand side:
 myGapLine << std::cout; // completely backwards, obviously wrong
 ```
 
-So the compiler never even _considered_ my member operator. It wasn’t a namespace issue. It wasn’t the ADL being weird. It was simply the fact that I put the operator in a place where the language would never look for it.
+So the compiler never even _considered_ my member operator. It wasn't a namespace issue. It wasn't the ADL being weird. It was simply the fact that I put the operator in a place where the language would never look for it.
 
 ## Fixing It
 
-After some very helpful SO posts (I still maintain that SO was a net _positive_ to the programming community, unlike many others who seem to be glad it's dead thanks to AI), everything clicked. My operator wasn’t broken. My build wasn’t broken. The compiler wasn’t broken. I just defined the overload in the wrong shape.
+After some very helpful SO posts (I still maintain that SO was a net _positive_ to the programming community, unlike many others who seem to be glad it's dead thanks to AI), everything clicked. My operator wasn't broken. My build wasn't broken. The compiler wasn't broken. I just defined the overload in the wrong shape.
 
 The fix was to make the operator a free function - and the easiest way to do that without exposing all my internals was to declare it as a `friend` inside the class:
 
@@ -69,9 +69,9 @@ So, for reference, for `operator<<` and `operator>>`, the rule of thumb is:
 - They should be free functions, not members
 - They should be visible to ADL
 - Which usually means: put them in the same namespace as your type
-- Or, if you’re not using namespaces, declare them as friends inside the class
-- Definitely don’t put them in `std`
-- Definitely don’t hide them in some random utility namespace
+- Or, if you're not using namespaces, declare them as friends inside the class
+- Definitely don't put them in `std`
+- Definitely don't hide them in some random utility namespace
 
 > To clarify, you _can_ have stream operator member functions, just note that the order will be flipped and they will only work when your type is on the LHS
 
@@ -80,4 +80,4 @@ If your type is just `GapLine` in the global namespace, then a friend function w
 
 Otherwise, the ADL just shrugs.
 
-Anyway, I’m back to writing my editor. Hopefully without discovering another obscure corner of the language next week.
+Anyway, I'm back to writing my editor. Hopefully without discovering another obscure corner of the language next week.

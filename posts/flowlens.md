@@ -19,7 +19,7 @@ We went full-stack for this one:
 - LangGraph as the execution engine, with our testing nodes injected directly into the workflow
 - Ollama powering the fuzzer node for adversarial prompt generation
 
-The testing nodes integrate directly into LangGraph’s state machine, so you’re not testing a mock - you’re testing the real workflow with real state transitions.
+The testing nodes integrate directly into LangGraph's state machine, so you're not testing a mock - you're testing the real workflow with real state transitions.
 
 ![diagram](/static/flowlens-diagram.png)
 
@@ -33,11 +33,11 @@ At its core, the platform lets you:
 - Watch nodes light up in real time as logs stream in
 - Get an AI‑generated security report the moment execution finishes
 
-It’s not a simulation. You’re testing the actual agent, with its real state, real prompts, and real logic.
+It's not a simulation. You're testing the actual agent, with its real state, real prompts, and real logic.
 
 ![diagram](/static/flowlens-demo.png)
 ![diagram](/static/flowlens-1.png)
 
-We also added Attack Mode, which lets you point the tool at any external API, attach testing nodes, and see how it holds up. It’s like Burp Suite, but built specifically for AI systems.
+We also added Attack Mode, which lets you point the tool at any external API, attach testing nodes, and see how it holds up. It's like Burp Suite, but built specifically for AI systems.
 
 Check out the repo [here](https://github.com/ujaandas/gah2025/)!
