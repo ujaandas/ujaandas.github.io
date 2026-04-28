@@ -11,8 +11,8 @@
     {{ template "sidebar.html" . }}
 
     <div class="md:mt-10 w-full overflow-hidden">
-
-      <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">{{ .Frontmatter.Title }}</h1>
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2">{{ .Frontmatter.Title }}</h1>
+      <p class="text-sm tracking-wide text-gray-500 mb-4">{{ .Frontmatter.Date }}</p>
       <article class="article">
         <div class="w-full h-48 overflow-hidden rounded-lg mb-5">
           <img src={{ .Frontmatter.Thumbnail }} alt="Thumbnail for {{ .Frontmatter.Title }}"

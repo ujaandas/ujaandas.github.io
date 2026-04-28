@@ -19,7 +19,7 @@
           class="text-2xl font-semibold text-blue-700 hover:underline underline-offset-4 decoration-2 transition-colors duration-200">
           <a href={{ .Filepath }}>{{ .Frontmatter.Title }}</a>
         </h2>
-        <p class="text-sm tracking-wide text-gray-500 mt-1 mb-2">{{ .Frontmatter.Date }}</p>
+        <p class="text-sm tracking-wide text-gray-500">{{ .Frontmatter.Date }}</p>
         <p class="text-lg text-gray-700 leading-relaxed">{{ .Snippet }}</p>
       </article>
       {{ end }}
