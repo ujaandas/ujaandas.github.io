@@ -6,13 +6,13 @@ date: "February 1, 2026"
 thumbnail: "/static/terraviz.png"
 ---
 
-TerraVysers was our weekend-long descent into the world of geospatial intelligence at IC Hack '26. The challenge prompt was about "using data for predictions and decision-making," which is one of those phrases that sounds straightforward until you realise the data in question is scattered across a dozen global datasets, half of which require some obscure, random API.
+TerraViz was our weekend-long descent into the world of geospatial intelligence at IC Hack '26. The challenge prompt was about "using data for predictions and decision-making," which is one of those phrases that sounds straightforward until you realise the data in question is scattered across a dozen global datasets, half of which require some obscure, random API.
 
 Still, we figured: environmental data is everywhere, but actionable environmental insight... not so much. So what if we built something that could take all that raw climate, soil, and satellite information and turn it into something a policymaker, a farmer, or even a market maker could understand?
 
 ### The Big Idea
 
-The core premise behind TerraVysers is simple: pick a region on a map, and we tell you something meaningful about it, actual predictions - things that help you make decisions.
+The core premise behind TerraViz is simple: pick a region on a map, and we tell you something meaningful about it, actual predictions - things that help you make decisions.
 
 We ended up building a platform that could:
 
@@ -26,7 +26,7 @@ The system is modular, so new datasets or models can slot in without rewriting t
 
 ### Inner Workings
 
-Under the hood, TerraVysers pulls from:
+Under the hood, TerraViz pulls from:
 
 - Global rainfall datasets for erosion drivers
 - Soil property APIs for composition and erodibility
@@ -51,6 +51,6 @@ And yes, we did manage to explain it to the judges in under 180 seconds - though
 
 ### What's Next
 
-TerraVysers isn't meant to be a pretty map. It's meant to be a decision engine - a way to turn environmental data into operational guidance for land use, climate strategy, and food security.
+TerraViz isn't meant to be a pretty map. It's meant to be a decision engine - a way to turn environmental data into operational guidance for land use, climate strategy, and food security.
 
 And for a weekend project, I think we got surprisingly close!

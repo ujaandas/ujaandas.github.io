@@ -1,12 +1,10 @@
 ---
-title: "Greenlint, Making Code (and the Planet) Less Sad"
+title: "Greenlint - Sustainable Code Analysis"
 template: "project"
 tags: ["projects"]
 date: "February 22, 2026"
 thumbnail: "/static/greenlint.jpg"
 ---
-
-GreenLint was our HackEurope'26 project born out of a universal developer trauma: you're cruising through a SIG OA, feeling like a genius, and then - bam - "Time Limit Exceeded." The silent judgment of the runtime gods.
 
 Here's the thing nobody talks about: inefficient code isn't just slow. It's expensive. It's wasteful. And at scale, it's a carbon tax on the planet.
 
@@ -51,16 +49,16 @@ Even cooler: we built a heuristic model that translates algorithmic complexity a
 
 The backend is Python, the dashboard is React, and the Git hook prototype scans your diff, optimises it, and reports carbon savings before your code even hits the repo.
 
-### What's Next
+### Looking Ahead
 
-We're nowhere near done. Some things we'd love to build:
+Some things we'd love to build:
 
 - GreenLint as an agent - participating in PRs and issues directly
 - More languages - Rust, Go, Java, C#, you name it
 - Hardware‑specific profiles - ARM vs. x86 vs. cloud GPUs
 - A GreenLint Marketplace - community-driven "green rules" for different industries
 
-GreenLint started as a hackathon project, but the problem it tackles is very real. Code efficiency isn't just about speed - it's about sustainability these days, too.
+GreenLint was a hackathon project, but the problem it tackles is very real. Code efficiency isn't just about speed - it's about sustainability these days, too.
 
 And if we can make the planet a little happier while making your code a little cleaner, that feels like a win.
 
