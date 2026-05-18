@@ -11,20 +11,15 @@
     {{ template "sidebar.html" . }}
 
     <div class="md:mt-10">
-      <a href="/posts/about-me/">
-        <h1
-          class="text-3xl md:text-4xl mb-7 text-blue-900 hover:text-blue-800 hover:underline underline-offset-4 decoration-2 font-bold tracking-tight transition-colors duration-200">
-          Hey, I'm Ujaan.
-        </h1>
+      <a href="/posts/about-me/"
+        class="block text-slate-800 hover:text-blue-800 text-3xl md:text-4xl mb-7 font-bold tracking-tight">
+        Hey, I'm Ujaan.
       </a>
 
       {{ range filterPostsByNotField "tags" "not-post" (sortByDesc "date" .Global.Posts) }}
       <article class="mb-6">
-        <a href={{ .Filepath }}>
-          <h2
-            class="text-2xl font-semibold text-slate-700 hover:text-blue-800 hover:underline underline-offset-4 decoration-2 transition-colors duration-200">
-            {{ get .Frontmatter "title" }}
-          </h2>
+        <a href={{ .Filepath }} class="text-2xl font-semibold text-slate-700 hover:text-blue-800">
+          {{ get .Frontmatter "title" }}
         </a>
 
         <div class="flex flex-row items-center gap-2 mt-1">

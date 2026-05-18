@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer components {
+  a {
+    @apply underline decoration-transparent hover:decoration-current transition-all underline-offset-4 decoration-2 duration-100
+  }
+
   .article {
     @apply text-lg max-w-none leading-relaxed text-gray-800;
   }
