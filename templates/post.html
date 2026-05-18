@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>{{ .Frontmatter.Title }} | Ujaan Das</title>
+  <title>{{ get .Frontmatter "title" }} | Ujaan Das</title>
   {{ template "header.html" . }}
 </head>
 
@@ -11,8 +11,8 @@
     {{ template "sidebar.html" . }}
 
     <div class="md:mt-10 w-full overflow-hidden">
-      <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2">{{ .Frontmatter.Title }}</h1>
-      <p class="text-sm tracking-wide text-gray-500 mb-4">{{ .Frontmatter.Date }}</p>
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight mb-2">{{ get .Frontmatter "title" }}</h1>
+      <p class="text-sm tracking-wide text-gray-500 mb-4">{{ get .Frontmatter "date" }}</p>
       <article class="article">
         {{ .Content }}
       </article>
