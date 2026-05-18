@@ -1,7 +1,7 @@
 ---
 title: "Building a Static Site Generator in Go"
 template: "post"
-tags: ["posts"]
+tags: ["posts", "go"]
 date: "October 24, 2025"
 ---
 

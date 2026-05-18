@@ -1,7 +1,7 @@
 ---
 title: "Greenlint - Sustainable Code Analysis"
 template: "post"
-tags: ["projects"]
+tags: ["projects", "hackathon", "ai"]
 date: "February 22, 2026"
 thumbnail: "/static/greenlint.jpg"
 ---

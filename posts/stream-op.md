@@ -1,7 +1,7 @@
 ---
 title: "The Hell of Overloading Stream Operators"
 template: "post"
-tags: ["posts"]
+tags: ["posts", "c++"]
 date: "February 12, 2026"
 ---
 

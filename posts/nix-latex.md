@@ -1,7 +1,7 @@
 ---
 title: "Nix and LaTex"
 template: "post"
-tags: ["posts"]
+tags: ["posts", "nix"]
 date: "April 7, 2025"
 ---
 

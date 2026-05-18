@@ -1,7 +1,7 @@
 ---
 title: "The Autonomous Follow-Me Robot System"
 template: "post"
-tags: ["projects"]
+tags: ["projects", "robotics"]
 date: "May 14, 2025"
 thumbnail: "/static/robot.jpg"
 ---

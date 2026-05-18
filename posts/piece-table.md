@@ -1,7 +1,7 @@
 ---
 title: "I'm Doing How Many Heap Allocations per Keystroke???"
 template: "post"
-tags: ["posts"]
+tags: ["posts", "c++"]
 date: "March 11, 2026"
 ---
 

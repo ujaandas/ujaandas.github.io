@@ -1,7 +1,7 @@
 ---
 title: "Streamlining my Resume with Nix and LaTex"
 template: "post"
-tags: ["posts"]
+tags: ["posts", "nix"]
 date: "September 14, 2025"
 ---
 

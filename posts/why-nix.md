@@ -1,7 +1,7 @@
 ---
 title: "Why Nix?"
 template: "post"
-tags: ["posts"]
+tags: ["posts", "nix"]
 date: "March 26, 2025"
 ---
 
