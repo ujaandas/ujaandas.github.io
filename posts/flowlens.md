@@ -1,6 +1,6 @@
 ---
 title: "FlowLens - Graph-Based Agent Testing"
-template: "project"
+template: "post"
 tags: ["projects"]
 date: "November 19, 2025"
 thumbnail: "/static/flowlens.jpg"

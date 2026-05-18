@@ -1,6 +1,6 @@
 ---
 title: "Terraviz - Actionable Environmental Data"
-template: "project"
+template: "post"
 tags: ["projects"]
 date: "February 1, 2026"
 thumbnail: "/static/terraviz.png"

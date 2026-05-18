@@ -1,6 +1,6 @@
 ---
 title: "The Autonomous Follow-Me Robot System"
-template: "project"
+template: "post"
 tags: ["projects"]
 date: "May 14, 2025"
 thumbnail: "/static/robot.jpg"
