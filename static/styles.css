@@ -2,50 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
-@layer base {
-  :root {
-    --canvas: 248 249 252;
-    --ink: 31 41 55;
-    --surface-soft: 243 246 252;
-    --brand: 37 99 235;
-  }
-
-  html {
-    scroll-behavior: smooth;
-    font-size: 17px;
-  }
-
-  body {
-    font-family: 'EB Garamond', Georgia, Cambria, 'Times New Roman', serif;
-    line-height: 1.6;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    color: rgb(var(--ink)) !important;
-    background: white !important;
-  }
-
-
-
-  ::selection {
-    background: rgb(var(--brand));
-    color: white;
-  }
-
-  a {
-    transition: color 180ms ease, text-decoration-color 180ms ease, opacity 180ms ease;
-  }
-
-  code,
-  pre,
-  kbd,
-  samp {
-    font-family: 'JetBrains Mono', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
-    font-variant-ligatures: none;
-  }
-}
-
 @layer components {
   .article {
     @apply text-lg max-w-none leading-relaxed text-gray-800;
