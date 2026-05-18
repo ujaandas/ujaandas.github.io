@@ -17,12 +17,15 @@
     flake-utils.lib.eachDefaultSystem (
       system:
       let
-        # pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = nixpkgs.legacyPackages.${system};
         site = oojsite.defaultPackage.${system};
       in
       {
         packages.site = site;
         defaultPackage = site;
+        devShells.default = pkgs.mkShell {
+          buildInputs = [ site ];
+        };
       }
-      );
-    }
+    );
+}
