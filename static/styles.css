@@ -32,11 +32,7 @@
   }
 
   .article a {
-    @apply underline decoration-2 underline-offset-4 text-blue-700 hover:text-blue-900;
-  }
-
-  .article a:hover {
-    text-decoration-color: currentColor;
+    @apply text-blue-800 hover:text-blue-700;
   }
 
   .article>ul {
@@ -52,7 +48,7 @@
   }
 
   .article>blockquote {
-    @apply pl-4 italic text-gray-600 my-6;
+    @apply my-6 border-l-4 border-slate-300 bg-slate-100 px-4 py-3 text-gray-700 italic rounded-r-lg;
   }
 
   .article code {
