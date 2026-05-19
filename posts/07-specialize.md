@@ -11,7 +11,7 @@ Genuine question. As a soon-to-be graduate, this is a question I ask myself a lo
 
 ### For specialization
 
-Obviously, you hit a smaller niche, and face less competition. Usually, this is in an area you can't just "learn", like VLSI, robotics or embedded.
+Obviously, you hit a smaller niche, and face less competition. Usually, this is in an area you can't just "learn on the job", like VLSI, robotics or embedded.
 
 But equally as obviously, you hit a smaller market.
 
@@ -33,7 +33,7 @@ Honestly, I don't really know.
 
 I kind of fall into the second bucket. 
 
-I've interned at HCI and program analysis research labs, worked on backend, frontend _and_ AI features at startups, and all my projects are in C++ or Go. I'm explicitly interested in compilers and PL (i.e. completely useless as a marketable skill). 
+I've interned at HCI and program analysis research labs (two vastly different fields), worked on backend, frontend _and_ AI features at startups (isn't full-stack dead?), and all my projects are in C++ or Go (unlike my work experience which is in Python and TypeScript). I'm explicitly interested in compilers and PL (i.e. completely useless as a marketable skill). 
 
 My "stack" is all over the place.
 
