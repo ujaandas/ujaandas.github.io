@@ -1,7 +1,7 @@
 ---
-title: "Refocusing Snip's Direction"
+title: "Refocusing snip's direction"
 template: "post"
-tags: ["post"]
+tags: ["post", "projects", "c++"]
 date: "May 23, 2026"
 ---
 
