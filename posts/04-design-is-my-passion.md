@@ -1,7 +1,7 @@
 ---
 title: "Graphic design is my passion!"
 template: "post"
-tags: ["posts", "web"]
+tags: ["post", "web"]
 date: "May 19, 2026"
 ---
 Just kidding. I kind of suck at it. But I think that's part of my charm.
